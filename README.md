@@ -47,6 +47,10 @@ Python, TensorFlow 2.0, Keras, Numpy, PIL, Matplotlib, skikit-learn
 ## Acknowledgement 
 Huge thanks to Jason Grant, Assistant Professor of Computer Science at Middlebury College for advising this research project. 
 
-
-
-
+## Directory Details 
+- dataset contains 7 folders for each version of the modified dataset: 100% male, 20% M 80% F, 40% M 60% F, 50% M 50% F, M 60% 40% F, 80% M 20% F, 100% female 
+- embeddings contains arrays of face embeddings (vectors that represent the features extracted from the face) in a compressed format 
+- python_scripts 
+   - lfw_dataset.py: all of the photos in the ‘train‘ dataset are loaded, then faces are extracted, resulting in samples with square face input and a class label string as output. Then the ‘val‘ dataset is loaded, providing samples that can be used as a test dataset. Both datasets are then saved to a compressed NumPy array file called ‘lfw-dataset.npz‘
+   - lfw_embed.py: pre-process a face to calculate a face embedding for each face in both train and test datasets using facenet to be stored as used as imput to the classifer model
+   - classifies faces 
